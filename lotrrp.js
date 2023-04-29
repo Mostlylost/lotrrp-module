@@ -28,8 +28,8 @@ Hooks.on('init', async function () {
 		lr: "DND5E.LongRest",
 		day: "DND5E.Day",
 		charges: "DND5E.Charges",
-		jrny: "AIME.Journey",
-		adv: "AIME.Adventure"
+		jrny: "LOTRRP.Journey",
+		adv: "LOTRRP.Adventure"
 	};
 	// preLocalize("limitedUsePeriods");
 
@@ -47,17 +47,17 @@ Hooks.on('init', async function () {
 
 	CONFIG.DND5E.currencies = {
 	  gp: {
-	    label: "AIME.CoinsGP",
-	    abbreviation: "AIME.CoinsAbbrGP"
+	    label: "LOTRRP.CoinsGP",
+	    abbreviation: "LOTRRP.CoinsAbbrGP"
 	  },
 	  sp: {
-	    label: "AIME.CoinsSP",
-	    abbreviation: "AIME.CoinsAbbrSP",
+	    label: "LOTRRP.CoinsSP",
+	    abbreviation: "LOTRRP.CoinsAbbrSP",
 	    conversion: {into: "gp", each: 20}
 	  },
 	  cp: {
-	    label: "AIME.CoinsCC",
-	    abbreviation: "AIME.CoinsAbbrCC",
+	    label: "LOTRRP.CoinsCC",
+	    abbreviation: "LOTRRP.CoinsAbbrCC",
 	    conversion: {into: "sp", each: 12}
 	  }
 	};
@@ -70,22 +70,23 @@ Hooks.on('init', async function () {
 	  ath: { label: "DND5E.SkillAth", ability: "str" },
 	  dec: { label: "DND5E.SkillDec", ability: "cha" },
 	  his: { label: "DND5E.SkillHis", ability: "int" },
-	  ins: { label: "AIME.SkillIns", ability: "wis" },
+	  ins: { label: "LOTRRP.SkillIns", ability: "wis" },
 	  itm: { label: "DND5E.SkillItm", ability: "cha" },
 	  inv: { label: "DND5E.SkillInv", ability: "int" },
-	  lor: { label: "AIME.SkillLor", ability: "int" },
+	  lor: { label: "LOTRRP.SkillLor", ability: "int" },
 	  med: { label: "DND5E.SkillMed", ability: "wis" },
 	  nat: { label: "DND5E.SkillNat", ability: "int" },
 	  prc: { label: "DND5E.SkillPrc", ability: "wis" },
 	  prf: { label: "DND5E.SkillPrf", ability: "cha" },
 	  per: { label: "DND5E.SkillPer", ability: "cha" },
-	  rid: { label: "AIME.SkillRid", ability: "int" },
+	  rid: { label: "LOTRRP.SkillRid", ability: "int" },
 	  // rel: { label: "DND5E.SkillRel", ability: "int" },
-	  sha: { label: "AIME.SkillSha", ability: "int" },
+	  exp: { label: "LOTRRP.SkillExp", ability: "wis" },
 	  slt: { label: "DND5E.SkillSlt", ability: "dex" },
 	  ste: { label: "DND5E.SkillSte", ability: "dex" },
 	  sur: { label: "DND5E.SkillSur", ability: "wis" },
-	  tra: { label: "AIME.SkillTra", ability: "int" }
+	  tra: { label: "LOTRRP.SkillTra", ability: "wis" },
+	  hun: { label: "LOTRRP.SkillHun", ability: "wis" }
 	};
 	// preLocalize("skills", { key: "label", sort: true });
 	// patchConfig("skills", "label", { since: 2.0, until: 2.2 });
@@ -97,8 +98,8 @@ Hooks.on('init', async function () {
 		int: "DND5E.AbilityInt",
 		wis: "DND5E.AbilityWis",
 		cha: "DND5E.AbilityCha",
-		sha: "AIME.AbilitySha",
-		perm: "AIME.AbilityPerm",
+		sha: "LOTRRP.AbilitySha",
+		perm: "LOTRRP.AbilityPerm",
 	};
 	// preLocalize("abilities");
 
@@ -117,16 +118,16 @@ Hooks.on('init', async function () {
 	// preLocalize("abilityAbbreviations");
 
 	CONFIG.DND5E.languages = {
-		common: "AIME.LanguagesCommon",
-		blackspeech: "AIME.LanguagesBlackSpeech",
-		ancient: "AIME.LanguagesQuenya",
-		sindarin: "AIME.LanguagesSindarin",
-		dalish: "AIME.LanguagesDalish",
-		vale: "AIME.LanguagesVale",
-		dwarvish: "AIME.LanguagesDwarvish",
-		woodland: "AIME.LanguagesWoodland",
-		rohan: "AIME.LanguagesRohan",
-		orkish: "AIME.LanguagesOrkish"
+		common: "LOTRRP.LanguagesCommon",
+		blackspeech: "LOTRRP.LanguagesBlackSpeech",
+		ancient: "LOTRRP.LanguagesQuenya",
+		sindarin: "LOTRRP.LanguagesSindarin",
+		dalish: "LOTRRP.LanguagesDalish",
+		vale: "LOTRRP.LanguagesVale",
+		dwarvish: "LOTRRP.LanguagesDwarvish",
+		woodland: "LOTRRP.LanguagesWoodland",
+		rohan: "LOTRRP.LanguagesRohan",
+		orkish: "LOTRRP.LanguagesOrkish"
 	};
 	// preLocalize("languages", { sort: true });
 
@@ -140,12 +141,16 @@ Hooks.on('init', async function () {
 			ability: "int"
 		},
 		{
-			skl: "sha",
-			ability: "int"
+			skl: "exp",
+			ability: "wis"
 		},
 		{
 			skl: "tra",
-			ability: "int"
+			ability: "wis"
+		},
+		{
+			skl: "hun",
+			ability: "wis"
 		},
 	];
 	// preLocalize("newSkills");
@@ -161,9 +166,9 @@ Hooks.on('init', async function () {
 		},
 	];
 
-	game.settings.register("aime", "spellbookToggle", {
-		name: `${game.i18n.localize("AIME.Settings.SpellbookToggle.name")}`,
-		hint: game.i18n.localize("AIME.Settings.SpellbookToggle.hint"),
+	game.settings.register("lotrrp", "spellbookToggle", {
+		name: `${game.i18n.localize("LOTRRP.Settings.SpellbookToggle.name")}`,
+		hint: game.i18n.localize("LOTRRP.Settings.SpellbookToggle.hint"),
 		scope: "user",
 		config: true,
 		default: false,
@@ -173,19 +178,19 @@ Hooks.on('init', async function () {
 
 	if (tidy5eModule === true) {
     		loadTemplates([
-    		'modules/aime/templates/aime-tidy5e-standard.hbs',
+    		'modules/lotrrp/templates/lotrrp-tidy5e-standard.hbs',
     		]);
     	}
     loadTemplates([
-    	'modules/aime/templates/aime-miserable-box.hbs',
-    	'modules/aime/templates/aime-scores-end.hbs',
-    	'modules/aime/templates/aime-living-standard.hbs'
+    	'modules/lotrrp/templates/lotrrp-miserable-box.hbs',
+    	'modules/lotrrp/templates/lotrrp-scores-end.hbs',
+    	'modules/lotrrp/templates/lotrrp-living-standard.hbs'
 	]);
 
 	CONFIG.DND5E.delSkills = ["arc", "rel", "tss", "tst"];
 
 	// Remove PP and EP from showing up on character sheet displays since we don't use them in AiME	
-	libWrapper.register("aime", "game.dnd5e.applications.actor.ActorSheet5eCharacter.prototype.getData", async function patchedActorSheet5eCharacter(wrapped, ...args) {
+	libWrapper.register("lotrrp", "game.dnd5e.applications.actor.ActorSheet5eCharacter.prototype.getData", async function patchedActorSheet5eCharacter(wrapped, ...args) {
 
 		const data = await wrapped(...args);
 		delete data.system.currency.pp;
@@ -196,7 +201,7 @@ Hooks.on('init', async function () {
 	}, "WRAPPER");
 
 	// Remove PP and EP from showing up on vehicle sheet displays since we don't use them in AiME	
-	libWrapper.register("aime", "game.dnd5e.applications.actor.ActorSheet5eVehicle.prototype.getData", async function patchedActorSheet5eCharacter(wrapped, ...args) {
+	libWrapper.register("lotrrp", "game.dnd5e.applications.actor.ActorSheet5eVehicle.prototype.getData", async function patchedActorSheet5eCharacter(wrapped, ...args) {
 
 		const data = await wrapped(...args);
 		delete data.system.currency.pp;
@@ -206,7 +211,7 @@ Hooks.on('init', async function () {
 		return data
 	}, "WRAPPER");
 
-	libWrapper.register("aime", "CONFIG.Actor.documentClass.prototype.prepareDerivedData", function patchedPrepareDerivedData(wrapped, ...args) {
+	libWrapper.register("lotrrp", "CONFIG.Actor.documentClass.prototype.prepareDerivedData", function patchedPrepareDerivedData(wrapped, ...args) {
     wrapped(...args);
 
 		    //FIX CUSTOM SKILL ABILITIES
@@ -261,25 +266,25 @@ Hooks.on('renderActorSheet', async function (app, html, data) {
 	const sheetTidyType = app.options.classes[3];
 
 	if (sheet5e === "dnd5e,sheet,actor,character") {
-	const misBox = "/modules/aime/templates/aime-miserable-box.hbs"
+	const misBox = "/modules/lotrrp/templates/lotrrp-miserable-box.hbs"
 	const misHtml = await renderTemplate(misBox, actor);
 	var inspDiv = $(html).find(".flexrow.inspiration");
 	inspDiv[0].outerHTML = misHtml;
 
-        const scoreBox = "/modules/aime/templates/aime-scores-end.hbs"
+        const scoreBox = "/modules/lotrrp/templates/lotrrp-scores-end.hbs"
         const scoreHtml = await renderTemplate(scoreBox, data);
         var abiScores = $(html).find(".ability-scores.flexrow");
         var endScores = $(html).find( ".ability-scores.flexrow li" ).slice(6);
         endScores.remove()
 	abiScores.append(scoreHtml)
 
-        const livingBox = "/modules/aime/templates/aime-living-standard.hbs"
+        const livingBox = "/modules/lotrrp/templates/lotrrp-living-standard.hbs"
         const livingHtml = await renderTemplate(livingBox, actor);
         var alignment = $(html).find('*[name="system.details.alignment"]').parent()[0];
         alignment.innerHTML = livingHtml;
 
         //Remove spellbook tab if setting is enabled
-	if (game.settings.get("aime", "spellbookToggle")) {
+	if (game.settings.get("lotrrp", "spellbookToggle")) {
         	$(html).find('*[data-tab="spellbook"]').remove()
 	};
 
@@ -311,15 +316,15 @@ Hooks.on('renderActorSheet', async function (app, html, data) {
 
 	Hooks.on("renderTidy5eSheet", async (app, html, data) => {
 		const actor = data.actor;
-		const tidyGP = "/modules/aime/templates/aime-tidy5e-gp.hbs"
+		const tidyGP = "/modules/lotrrp/templates/lotrrp-tidy5e-gp.hbs"
 		const tidyGPRender =  await renderTemplate(tidyGP, data);
-		const tidySP = "/modules/aime/templates/aime-tidy5e-sp.hbs"
+		const tidySP = "/modules/lotrrp/templates/lotrrp-tidy5e-sp.hbs"
 		const tidySPRender =  await renderTemplate(tidySP, data);
-		const tidyCP = "/modules/aime/templates/aime-tidy5e-cp.hbs"
+		const tidyCP = "/modules/lotrrp/templates/lotrrp-tidy5e-cp.hbs"
 		const tidyCPRender =  await renderTemplate(tidyCP, data);
-		const livingBox = "/modules/aime/templates/aime-tidy5e-standard.hbs"
+		const livingBox = "/modules/lotrrp/templates/lotrrp-tidy5e-standard.hbs"
 		const livingHtml = await renderTemplate(livingBox, actor);
-		const tidyMisBox = "/modules/aime/templates/aime-tidy5e-miserable.hbs"
+		const tidyMisBox = "/modules/lotrrp/templates/lotrrp-tidy5e-miserable.hbs"
 		const tidyMisHtml = await renderTemplate(tidyMisBox, actor);
 		let tidyBG = $(html).find('[data-input*="background"]');
 		let tidySummaryDel = $(html).find( '[data-target*="alignment"], [data-input*="alignment"]' );
@@ -345,7 +350,7 @@ Hooks.on('renderActorSheet', async function (app, html, data) {
 		tidyInspiration.after(tidyMisHtml);
 
 		//Remove spellbook tab if setting is enabled
-		if (game.settings.get("aime", "spellbookToggle")) {
+		if (game.settings.get("lotrrp", "spellbookToggle")) {
 			$(html).find('[data-tab="spellbook"]').remove()	
 		};
 
@@ -415,11 +420,11 @@ Hooks.on("renderTidy5eNPC", async (app, html, data) => {
 });
 
 Hooks.on("renderTidy5eVehicle", async (app, html, data) => {
-	const tidyGP = "/modules/aime/templates/aime-tidy5e-gp.hbs"
+	const tidyGP = "/modules/lotrrp/templates/lotrrp-tidy5e-gp.hbs"
 	const tidyGPRender =  await renderTemplate(tidyGP, data);
-	const tidySP = "/modules/aime/templates/aime-tidy5e-sp.hbs"
+	const tidySP = "/modules/lotrrp/templates/lotrrp-tidy5e-sp.hbs"
 	const tidySPRender =  await renderTemplate(tidySP, data);
-	const tidyCP = "/modules/aime/templates/aime-tidy5e-cp.hbs"
+	const tidyCP = "/modules/lotrrp/templates/lotrrp-tidy5e-cp.hbs"
 	const tidyCPRender =  await renderTemplate(tidyCP, data);
 
 	// Remove Shadow and Perm scores
