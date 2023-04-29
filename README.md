@@ -1,5 +1,15 @@
-# Adventures in Middle-Earth
-Adventures in Middle-Earth (AiME) is a module for Foundry VTT's DND5E system. It allows players to play DND5E using the rules from Cubicle 7's Lord of the Rings system: Adventures in Middle-Earth.
+# The Lord of the Rings Roleplaying 5e
+The Lord of the Rings Roleplaying 5e (lotrrp) is a module for Foundry VTT's DND5E system.
+  
+
+
+Probably will not wook but will see.
+
+
+
+
+
+
 
 <img src="https://img.shields.io/endpoint?url=https://foundryshields.com/version?url=https://raw.githubusercontent.com/ZWinther/aime-module/master/module.json">
 <img src="https://img.shields.io/endpoint?url=https://foundryshields.com/system?url=https://raw.githubusercontent.com/ZWinther/aime-module/master/module.json">
