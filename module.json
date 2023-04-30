@@ -84,5 +84,5 @@
     }
   ],
   "manifest": "https://raw.githubusercontent.com/Mostlylost/lotrrp-module/main/module.json",
-  "download": "https://github.com/Mostlylost/lotrrp-module/archive/refs/tags/lotrrp.1.zip"
+  "download": "https://github.com/Mostlylost/lotrrp-module/releases/download/new/lotrrp.1.zip"
 }
