@@ -1,7 +1,7 @@
 // Remind users to install/enable libwrapper
 Hooks.once('ready', () => {
     if(!game.modules.get('lib-wrapper')?.active && game.user.isGM)
-        ui.notifications.error("Adventures in Middle-Earth requires the 'libWrapper' module. Please install and activate it.");
+        ui.notifications.error("The Lord of the Rings Roleplaying requires the 'libWrapper' module. Please install and activate it.");
 });
 
 // Handlebars helpers
