@@ -189,7 +189,7 @@ Hooks.on('init', async function () {
 
 	CONFIG.DND5E.delSkills = ["arc", "rel", "tss", "tst"];
 
-	// Remove PP and EP from showing up on character sheet displays since we don't use them in AiME	
+	// Remove PP and EP from showing up on character sheet displays since we don't use them in LOTRRP	
 	libWrapper.register("lotrrp", "game.dnd5e.applications.actor.ActorSheet5eCharacter.prototype.getData", async function patchedActorSheet5eCharacter(wrapped, ...args) {
 
 		const data = await wrapped(...args);
@@ -200,7 +200,7 @@ Hooks.on('init', async function () {
 		return data
 	}, "WRAPPER");
 
-	// Remove PP and EP from showing up on vehicle sheet displays since we don't use them in AiME	
+	// Remove PP and EP from showing up on vehicle sheet displays since we don't use them in LOTRRP	
 	libWrapper.register("lotrrp", "game.dnd5e.applications.actor.ActorSheet5eVehicle.prototype.getData", async function patchedActorSheet5eCharacter(wrapped, ...args) {
 
 		const data = await wrapped(...args);

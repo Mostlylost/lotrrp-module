@@ -192,10 +192,10 @@
 .ability-name.box-title.rollable[title="Permanent"] {
   pointer-events: none !important;
 }
-.aimeTidyInput {
+.lotrrpTidyInput {
   width: max-content;
 }
-.aimeTidyInput input {
+.lotrrpTidyInput input {
   margin:0;
   padding: 0;
   height: 12px;
