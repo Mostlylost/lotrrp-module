@@ -1,7 +1,7 @@
 # The Lord of the Rings Roleplaying 5e
 The Lord of the Rings Roleplaying 5e (lotrrp) is a module for Foundry VTT's DND5E system.
   
-Probably will not wook but will see...
+Probably will not work but will see...
 .
 .
 .
