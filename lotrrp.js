@@ -74,7 +74,7 @@ Hooks.on('init', async function () {
 	  itm: { label: "DND5E.SkillItm", ability: "cha" },
 	  inv: { label: "DND5E.SkillInv", ability: "int" },
 	  lor: { label: "LOTRRP.SkillLor", ability: "int" },
-	  med: { label: "DND5E.SkillMed", ability: "wis" },
+	  med: { label: "DND5E.SkillMed", ability: "int" },
 	  nat: { label: "DND5E.SkillNat", ability: "int" },
 	  prc: { label: "DND5E.SkillPrc", ability: "wis" },
 	  prf: { label: "DND5E.SkillPrf", ability: "cha" },
