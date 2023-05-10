@@ -2,13 +2,11 @@
 The Lord of the Rings Roleplaying 5e (lotrrp) is a module for Foundry VTT's DND5E system.
   
 Probably will not work but will see...
-.
-.
-.
-.
-.
-.
-.
+This module uses https://raw.githubusercontent.com/Mostlylost/lotrrp-module/main/module.json for installation.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+From ZWinter AIME Modile
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 <img src="https://img.shields.io/endpoint?url=https://foundryshields.com/version?url=https://raw.githubusercontent.com/ZWinther/aime-module/master/module.json">
